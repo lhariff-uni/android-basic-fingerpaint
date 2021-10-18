@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.fingerpainter.viewmodel.ColourViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.SelectColour">
+
+        <Button
+            android:id="@+id/colour_select_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="@{() -> viewmodel.onSelectClick()}"
+            android:text="@string/select_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colour_table_layout"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TableLayout
+            android:id="@+id/colour_table_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="15dp"
+            android:stretchColumns="300dp"
+            app:layout_constraintBottom_toTopOf="@+id/colour_select_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preview_colour"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <TableRow
+                android:id="@+id/colour_table_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/red_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/red, @string/red)}"
+                    android:text="@string/red"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/red" />
+
+                <Button
+                    android:id="@+id/green_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/green, @string/green)}"
+                    android:text="@string/green"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/green" />
+
+                <Button
+                    android:id="@+id/blue_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/blue, @string/blue)}"
+                    android:text="@string/blue"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/blue" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/colour_table_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/magenta_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/magenta, @string/magenta)}"
+                    android:text="@string/magenta"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/magenta" />
+
+                <Button
+                    android:id="@+id/yellow_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/yellow, @string/yellow)}"
+                    android:text="@string/yellow"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/yellow" />
+
+                <Button
+                    android:id="@+id/cyan_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/cyan, @string/cyan)}"
+                    android:text="@string/cyan"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/cyan" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/colour_table_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/white_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/white, @string/white)}"
+                    android:text="@string/white"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/white" />
+
+                <Button
+                    android:id="@+id/gray_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/gray, @string/gray)}"
+                    android:text="@string/gray"
+                    android:textColor="@color/black"
+                    app:backgroundTint="@color/gray" />
+
+                <Button
+                    android:id="@+id/black_button"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="@{() -> viewmodel.onColourClick(@color/black, @string/black)}"
+                    android:textColor="@color/white"
+                    android:text="@string/black"
+                    app:backgroundTint="@color/black" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/preview_color_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preview_colour"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/preview_colour"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/preview_colour"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:clickable="false"
+            android:text="@{viewmodel.colourName}"
+            android:backgroundTint="@{viewmodel.colour}"
+            android:textColor="@{viewmodel.textColour}"
+            app:layout_constraintBottom_toTopOf="@+id/colour_table_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/preview_color_text"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

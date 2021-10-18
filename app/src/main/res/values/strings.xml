@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Finger Painter</string>
+    <string name="color_label">Color Selector</string>
+    <string name="brush_label">Brush Selector</string>
+    <string name="select_label">Select</string>
+    <string name="preview_colour">Colour Preview</string>
+    <string name="preview_brush">Brush Selection</string>
+
+    <string name="red">RED</string>
+    <string name="green">GREEN</string>
+    <string name="blue">BLUE</string>
+    <string name="magenta">MAGENTA</string>
+    <string name="yellow">YELLOW</string>
+    <string name="cyan">CYAN</string>
+    <string name="white">WHITE</string>
+    <string name="gray">GRAY</string>
+    <string name="black">BLACK</string>
+
+    <string name="round">Round</string>
+    <string name="square">Square</string>
+    <string name="width">Brush Width</string>
+    <string name="plus1">+1</string>
+    <string name="plus10">+10</string>
+    <string name="minus1">-1</string>
+    <string name="minus10">-10</string>
+
+    <string name="nulltext">null</string>
+</resources>
